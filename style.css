@@ -1,0 +1,68 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 100%;
+}
+
+#locationText {
+    text-transform: capitalize;
+}
+
+@media (max-width:992px) {
+    #spinner {
+        height: 620px !important;
+    }
+
+    .container {
+        width: 0;
+        height: 0;
+        display: block;
+        justify-content: baseline;
+        align-items: baseline;
+    }
+
+    .app {
+        margin-top: 15px;
+    }
+
+    .card-hr {
+        padding-top: 3px;
+    }
+
+    #cardList {
+        flex-wrap: wrap;
+    }
+}
+
+.invalid {
+    animation-duration: 250ms;
+    animation-name: horizontal-shaking;
+}
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(5px)
+    }
+
+    50% {
+        transform: translateX(-5px)
+    }
+
+    75% {
+        transform: translateX(5px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
